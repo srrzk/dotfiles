@@ -1,0 +1,4 @@
+theme="base16_default_dark"
+
+[editor.file-picker]
+hidden=false

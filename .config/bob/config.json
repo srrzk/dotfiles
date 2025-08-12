@@ -1,0 +1,5 @@
+{
+  "add_neovim_binary_to_path": true,
+  "enable_release_build": true,
+  "version_sync_file_location": "/home/srrzk/.config/nvim/nvim.version"
+}
