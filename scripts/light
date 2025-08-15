@@ -1,0 +1,22 @@
+#!/bin/bash
+
+set -euo pipefail  # Fail on error, unset var, or pipe failure
+shopt -s failglob
+
+light() {
+	# Change GTK3/4 theme
+	echo "Changing theme to light"
+	sed -i 's/^gtk-application-prefer-dark-theme=1/gtk-application-prefer-dark-theme=0/' "$XDG_CONFIG_HOME"/gtk-*.0/settings.ini
+
+	# Change foot theme
+	# It will restart foot-server thus closing all footclient instances and open $tmux terminal on workspace 1
+	sed -i 's/^initial-color-theme=1/initial-color-theme=2/' "$XDG_CONFIG_HOME"/foot/foot.ini
+	systemctl --user restart foot-server
+	hyprctl dispatch exec [workspace 1 silent] "uwsm app -- footclient -e uwsm app -- tmux new-session -ADs default -c ~/dotfiles"
+
+	darkman set light
+
+	hyprctl reload
+}
+
+light "$@"
