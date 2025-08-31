@@ -1,0 +1,13 @@
+modmap:
+  - name: Default modmaps
+    remap:
+      CapsLock:
+        held: leftctrl
+        alone: esc
+        free_hold: true
+
+keymap:
+  - name: Default keymaps
+    remap:
+      Alt-Shift-L: Ctrl-Pagedown
+      Alt-Shift-H: Ctrl-Pageup

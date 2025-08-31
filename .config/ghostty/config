@@ -1,0 +1,4 @@
+font-family=monospace
+font-size=14
+keybind=ctrl+alt+l=goto_split:right
+keybind=ctrl+alt+h=goto_split:left

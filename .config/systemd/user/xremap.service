@@ -1,0 +1,13 @@
+[Unit]
+Description=Xremap is a key remapper for X11 and Wayland
+After=default.target
+
+[Service]
+ExecStart=%h/.cargo/bin/xremap --watch %h/.config/xremap/xremap.yml
+Restart=always
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target
+

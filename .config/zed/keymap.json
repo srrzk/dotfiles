@@ -1,0 +1,32 @@
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-j": "workspace::ToggleBottomDock",
+      "alt-b": "workspace::ToggleLeftDock",
+      "ctrl-alt-b": "workspace::ToggleRightDock"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting && !VimObject",
+    "bindings": {
+      "shift-s": ["vim::PushAddSurrounds", {}]
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-q": null
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-shift-w": null
+    }
+  }
+]
